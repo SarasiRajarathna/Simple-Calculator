@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import "./App.css";
 
 function App() {
   const [value, setValue] = useState('');
@@ -26,15 +26,15 @@ function App() {
   };
 
   return (
-    <div className="container vw-100 vh-100 d-flex align-items-center justify-content-center bg-dark">
-      <div className="bg-secondary p-4 rounded shadow-lg">
+    <div className="container min-vh-100 d-flex align-items-center justify-content-center">
+      <div className="bg-secondary p-4 rounded shadow-lg w-100" style={{ maxWidth: "400px" }}>
         <form>
           <div className="mb-3">
             <input
               type="text"
               value={value}
               readOnly
-              className="form-control text-end fs-3 bg-light"
+              className="form-control text-end fs-3 bg-light border-2 border-dark shadow-sm"
             />
           </div>
 
